@@ -36,3 +36,22 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+
+// Navbar Active berdasarkan klik
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+
+document.querySelectorAll('.card-smk2, .card-impl')
+  .forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('active');
+    });
+  });
